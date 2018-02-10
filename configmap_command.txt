@@ -1,0 +1,1 @@
+kubectl create configmap my-app --from-literal=student_name=vinay --from-literal=school=LinuxAcademy --from-literal=kuberenetes=awsesome
