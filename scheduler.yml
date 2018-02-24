@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: manualschedule
+ labels:
+  app: busy
+spec:
+ containers:
+ - name: busybox
+   image: busybox
+   command: [ "sleep", "60" ]
+ nodeSelector:
+  net: fast 
