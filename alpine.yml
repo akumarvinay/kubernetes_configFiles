@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+ name: testdeployment
+spec:
+ replicas: 3
+ selector:
+  matchLabels:
+    running: afterLabels
+ template:
+  metadata:
+   labels:
+     running: afterLabels
+  spec:
+   containers:
+   - name: alpine
+     image: alpine
+     command: [ "sleep", "60" ]
+   restartPolicy: Always
+    
+    
